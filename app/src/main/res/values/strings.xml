@@ -3,4 +3,11 @@
     <string name="Logo">logo</string>
     <string name="logo">logo</string>
     <string name="login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="enteremail">Enter email address</string>
+    <string name="create">CREATE AN\nACCOUNT</string>
+    <string name="acc">ACCOUNT</string>
+    <string name="enterfn">Enter first name</string>
+    <string name="enterln">Enter last name</string>
+
 </resources>

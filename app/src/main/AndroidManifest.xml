@@ -9,61 +9,42 @@
         android:roundIcon="@mipmap/ic_launcher_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LuminousBank">
-
-
+        <activity
+            android:name=".Register3"
+            android:exported="false" />
+        <activity
+            android:name=".Register2"
+            android:exported="false" />
         <activity
             android:name=".Login1"
-            android:exported="true" >
+            android:exported="true" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false" /> <!-- Splash -->
+        <activity
+            android:name=".Splash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-        <activity
-            android:name=".Dashboard"
-            android:exported="false" />
-
-        <!-- Splash -->
-        <activity
-            android:name=".Splash"
-            android:exported="true">
-
-
-        </activity>
-
-        <!-- Home -->
+        </activity> <!-- Home -->
         <activity
             android:name=".Home"
-            android:exported="false" />
-
-        <!-- Register -->
+            android:exported="false" /> <!-- Register -->
         <activity
             android:name=".Register"
-            android:exported="false" />
-
-        <!-- Login -->
+            android:exported="false" /> <!-- Login -->
         <activity
             android:name=".Login"
-            android:exported="false">
-
-        </activity>
-
-        <!-- MainActivity -->
+            android:exported="false" /> <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
-
-        <!-- Used Font -->
+            android:exported="true" /> <!-- Used Font -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-
     </application>
 
 </manifest>

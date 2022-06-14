@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:visibility="visible"
+    android:padding="30dp"
+    tools:context=".Register3">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Back Button-->
+        <ImageView
+            android:id="@+id/SignupBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_back"
+            android:transitionName="transition_back_btn"/>
+
+
+            <TextView
+                android:id="@+id/Signup_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="One-Time\nPIN"
+                android:textColor="@color/green"
+                android:textSize="40sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginTop="20dp"
+                android:transitionName="transition_title_text"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/otp_description_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="Enter One-Time PIN sent on\n"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/pin_view"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:cursorVisible="true"
+                android:inputType="number"
+                android:itemBackground="#65EAEAEA"
+                app:cursorColor="@color/black"
+                app:hideLineWhenFilled="true"
+                app:itemCount="6"
+                app:itemHeight="50dp"
+                app:itemRadius="5dp"
+                app:itemWidth="50dp"
+                app:lineColor="@color/green"
+                app:lineWidth="1dp" />
+
+
+        </LinearLayout>
+
+        <!--Continue Button-->
+        <Button
+            android:id="@+id/Signup_next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="10dp"
+            android:transitionName="transition_next_btn"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
