@@ -47,6 +47,7 @@
 
             <!--First Name-->
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -73,6 +74,7 @@
 
             <!--Last Name-->
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -99,6 +101,7 @@
 
             <!--Email-->
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -122,11 +125,65 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!--Phone Number-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Phone Number"
+                app:hintTextColor="@color/black"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconTint="@color/black"
+                android:paddingBottom="5dp"
+                app:startIconDrawable="@drawable/ic_baseline_phone_24">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/black"
+                    android:inputType="phone">
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <!--Password-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Password"
+                app:hintTextColor="@color/black"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/black"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/black"
+                    android:inputType="textPassword">
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
 
         <!--Continue Button-->
         <Button
-            android:id="@+id/Signup_next_btn"
+            android:id="@+id/reg_btn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="80dp"
@@ -138,7 +195,8 @@
             android:textSize="18sp"
             app:cornerRadius="10dp"
             android:transitionName="transition_next_btn"
-            android:onClick="callNextSignupScreen"/>
+            android:onClick="registerUser"/>
+        <!--android:onClick="registerUser"-->
 
         <!--Login Existing Button-->
         <Button

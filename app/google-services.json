@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "268529199009",
+    "project_id": "luminousbankdb",
+    "storage_bucket": "luminousbankdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268529199009:android:c531c70c76bfb100764de0",
+        "android_client_info": {
+          "package_name": "com.example.luminousbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268529199009-eigp0jprla643ag616fpefdaq2bvrfjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnTCVXkEnWWg7FvpyfMRWVV6Y3I3IgsY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268529199009-eigp0jprla643ag616fpefdaq2bvrfjo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

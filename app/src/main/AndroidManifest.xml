@@ -10,13 +10,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LuminousBank">
         <activity
+            android:name=".TermsAndAgreement"
+            android:exported="false" />
+        <activity
+            android:name=".SendMoneyConfirmation"
+            android:exported="false" />
+        <activity
+            android:name=".SendMoney"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".VerifyPhoneNo"
+            android:exported="false" />
+        <activity
+            android:name=".fpSuccessMessage"
+            android:exported="false" />
+        <activity
+            android:name=".SetNewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".fpMakeSelection"
+            android:exported="false" />
+        <activity
+            android:name=".ForgetPassword"
+            android:exported="false" />
+        <activity
             android:name=".Register3"
             android:exported="false" />
         <activity
-            android:name=".Register2"
-            android:exported="false" />
-        <activity
-            android:name=".Login1"
+            android:name=".Login"
             android:exported="true" />
         <activity
             android:name=".Dashboard"
@@ -36,9 +60,7 @@
         <activity
             android:name=".Register"
             android:exported="false" /> <!-- Login -->
-        <activity
-            android:name=".Login"
-            android:exported="false" /> <!-- MainActivity -->
+        <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true" /> <!-- Used Font -->

@@ -9,5 +9,39 @@
     <string name="acc">ACCOUNT</string>
     <string name="enterfn">Enter first name</string>
     <string name="enterln">Enter last name</string>
+    <string name="forget_password_detail">Provide your accounts email\nfor which you want to reset your password</string>
+    <string name="make_selection_detail">Select which contact detail should we use\nto reset your password?</string>
+    <string name="new_credentials_detail">Your identity has been verified\nSet your new password</string>
+    <string name="password_updated">Password\nUpdated</string>
+    <string name="password_updated_success_message">Your password has been updated!</string>
+    <string name="otp_description_text">Enter One Time Password Sent On\n</string>
+
+    <string name="privacyPolicy1">\t\t\t\t\tBSCS3A-ACCS built the Luminous Bank app as a Free app. This SERVICE is provided by BSCS3A-ACCS at no cost and is intended for use as is.\n\t\t\t\t\tThis page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.\n\t\t\t\t\tIf you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.\n\t\t\t\t\tThe terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at Luminous Bank unless otherwise defined in this Privacy Policy.</string>
+    <string name="privacyPolicy2">\t\t\t\t\tFor a better experience, while using our Service, I may require you to provide us with certain personally identifiable information, including but not limited to Device attributes, Device identifiers, Device signals, Data from network connections, Data from device settings.\n\t\t\t\t\tThe information that I request will be retained on your device and is not collected by me in any way. The app does use third-party services that may collect information used to identify you. Link to the privacy policy of third-party service providers used by the app</string>
+    <string name="privacyPolicy3">\t\t\t\t\tCookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device\'s internal memory. This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</string>
+    <string name="privacyPolicy4">\t\t\t\t\tI value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.</string>
+    <string name="privacyPolicy5">\t\t\t\t\tBy tapping \"Agree and Continue\", you acknowledge that you have been informed about this update and you agree to Luminous\'s processing of your information.</string>
+    <string name="data_privacy">Data Privacy</string>
+    <string name="information_collection_and_use">Information Collection and Use</string>
+    <string name="cookies">Cookies</string>
+    <string name="agree_and_continue">Agree and Continue</string>
+    <string name="google_play_services">Google Play Services</string>
+    <string name="security">Security</string>
+
+    <!--Send Money Strings-->
+    <string name="sendMoney">Send Money</string>
+    <string name="accNumber">Account Number</string>
+    <string name="amount">Amount</string>
+    <string name="message">Message (optional)</string>
+
+
+    <!--Send Money Confirmation Strings-->
+    <string name="confirm">Confirmation</string>
+    <string name="recipientNum">+639090909090</string>
+    <string name="sendMoneyAmount">PHP 200.00</string>
+    <string name="transferFee">Transfer Fee PHP 0.00</string>
+    <string name="accountType">Send Money</string>
+    <string name="sendMoneyMessage">Message:</string>
+    <string name="sendMoneyInfo">Please ensure all information is correct.\nClicking \"SEND\" button means that you have validated all information and confirms it \nto be correct.</string>
 
 </resources>

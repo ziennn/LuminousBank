@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:visibility="visible"
     android:padding="30dp"
-    tools:context=".Register3">
+    tools:context=".VerifyPhoneNo">
 
 
     <LinearLayout
@@ -25,16 +25,16 @@
             android:transitionName="transition_back_btn"/>
 
 
-            <TextView
-                android:id="@+id/Signup_title_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="One-Time\nPIN"
-                android:textColor="@color/green"
-                android:textSize="40sp"
-                android:fontFamily="@font/poppins_semibold"
-                android:layout_marginTop="20dp"
-                android:transitionName="transition_title_text"/>
+        <TextView
+            android:id="@+id/Signup_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One-Time\nPIN"
+            android:textColor="@color/green"
+            android:textSize="40sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="20dp"
+            android:transitionName="transition_title_text"/>
 
 
         <LinearLayout
@@ -51,7 +51,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_medium"
                 android:includeFontPadding="false"
-                android:text="@string/otp_description_text"
+                android:text="Enter One-Time PIN sent on\n"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -69,9 +69,9 @@
                 app:cursorColor="@color/black"
                 app:hideLineWhenFilled="true"
                 app:itemCount="6"
-                app:itemHeight="40dp"
+                app:itemHeight="50dp"
                 app:itemRadius="5dp"
-                app:itemWidth="40dp"
+                app:itemWidth="50dp"
                 app:lineColor="@color/green"
                 app:lineWidth="1dp" />
 
@@ -80,13 +80,13 @@
 
         <!--Continue Button-->
         <Button
-            android:id="@+id/Signup_next_btn"
+            android:id="@+id/verify_btn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="80dp"
             android:backgroundTint="@color/green"
             android:fontFamily="@font/poppins_medium"
-            android:text="Verify OTP"
+            android:text="Verify"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"

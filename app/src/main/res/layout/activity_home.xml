@@ -85,7 +85,8 @@
         app:layout_constraintVertical_bias="0.01"
         app:strokeColor="@color/lightgreen"
         app:strokeWidth="1dp"
-        android:onClick="callLoginScreen"
-        android:transitionName="transition_login"/>
+        android:transitionName="transition_login"
+        android:onClick="callLoginScreen"/>
+    <!--android:onClick="callLoginScreen"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

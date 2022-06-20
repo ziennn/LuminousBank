@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "801548411560",
+    "project_id": "dbexer5",
+    "storage_bucket": "dbexer5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801548411560:android:178a44178dbb747fd8989d",
+        "android_client_info": {
+          "package_name": "com.example.exer5navarrocrizien"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801548411560-721d01vedpemhr215u4dsv20mc2m4trs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcc0JfZYqITEVJsET2RcZWxsTPVDay2ac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801548411560-721d01vedpemhr215u4dsv20mc2m4trs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
