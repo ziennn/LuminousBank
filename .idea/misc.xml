@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_forget_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_register3.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_splash.xml" value="0.20153985507246377" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_terms_and_agreement.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_user_profile.xml" value="0.20153985507246377" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/activity_verify_phone_no.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/Github/Luminous/app/src/main/res/layout/fragment_dashboard2.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/LuminousBank/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1675" />
         <entry key="..\:/AndroidProjects/LuminousBank/app/src/main/res/drawable/background_spashscreen.xml" value="0.1675" />
         <entry key="..\:/AndroidProjects/LuminousBank/app/src/main/res/drawable/ic_baseline_back.xml" value="0.2295" />
