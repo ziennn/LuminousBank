@@ -1,11 +1,17 @@
 package com.example.luminousbank;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
@@ -152,6 +158,11 @@ public class Register extends AppCompatActivity {
         roodNode = FirebaseDatabase.getInstance("https://luminousbankdb-default-rtdb.asia-southeast1.firebasedatabase.app/");
         reference = roodNode.getReference("Users");
 
+
+        //Check the internet connection
+        if (!isConnected(this)) {
+            showCustomDialog();
+        }
         //Get all the data from Intent
 
         //Validate Fields
@@ -185,7 +196,7 @@ public class Register extends AppCompatActivity {
         intent.putExtra("phoneNo", phoneNo);*/
         //intent.putExtra("whatToDO", "createNewUser"); // This is to identify that which action should OTP perform after verification.
 
-   /*     Pair[] pairs = new Pair[4];
+        Pair[] pairs = new Pair[4];
         pairs[0] = new Pair<View,String>(backBtn,"transition_back_btn");
         pairs[1] = new Pair<View,String>(next,"transition_next_btn");
         pairs[2] = new Pair<View,String>(login,"transition_login_btn");
@@ -196,8 +207,43 @@ public class Register extends AppCompatActivity {
             startActivity(intent, options.toBundle());
         } else {
             startActivity(intent);
-        }*/
+        }
 
+    }
+
+    //INTERNET CONNECTIVITY
+
+    private boolean isConnected(Register register) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) register.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo wifiConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo mobileConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        if ((wifiConn != null && wifiConn.isConnected() || mobileConn != null && mobileConn.isConnected())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    private void showCustomDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
+        builder.setMessage("Please connect to the internet to proceed further")
+                .setCancelable(false)
+                .setPositiveButton("Connect", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(getApplicationContext(), Home.class));
+                        finish();
+                    }
+                });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
     //Login Existing
