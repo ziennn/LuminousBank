@@ -1,10 +1,16 @@
 package com.example.luminousbank;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -47,7 +53,7 @@ public class Login extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
 
 
-       loginBackBtn.setOnClickListener(new View.OnClickListener() {
+        loginBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Login.this, Home.class);
@@ -56,6 +62,7 @@ public class Login extends AppCompatActivity {
         });
 
     }
+
     //VALIDATE PHONE NUMBER
     private boolean validatePhoneNumber() {
         String val = phoneNumber.getEditText().getText().toString();
@@ -69,6 +76,7 @@ public class Login extends AppCompatActivity {
             return true;
         }
     }
+
     //VALIDATE PASSWORD
     private Boolean validatePassword() {
         String val = password.getEditText().getText().toString();
@@ -83,70 +91,57 @@ public class Login extends AppCompatActivity {
     }
 
     //Login the user in app
-    public void loginUser(View view){
-        //Validate Login Info
-        if (!validatePhoneNumber() | !validatePassword()) {
-            return;
+    public void loginUser(View view) {
+
+        //Check the internet connection
+        if (!isConnected(this)) {
+            showCustomDialog();
+        }
+            //Validate Login Info
+            if (!validatePhoneNumber() | !validatePassword()) {
+                return;
+            } else {
+                isUser();
+            }
+    }
+
+    private boolean isConnected(Login login) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) login.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo wifiConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo mobileConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        if ((wifiConn != null && wifiConn.isConnected() || mobileConn != null && mobileConn.isConnected())) {
+            return true;
         }
         else{
-            isUser();
+            return false;
         }
-
     }
+
+    private void showCustomDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+        builder.setMessage("Please connect to the internet to proceed further")
+                .setCancelable(false)
+                .setPositiveButton("Connect", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(getApplicationContext(), Home.class));
+                        finish();
+                    }
+                });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+
     private void isUser(){
-       /* final String userEnteredPhoneNum = phoneNumber.getEditText().getText().toString().trim();
-        final String userEnteredPassword = phoneNumber.getEditText().getText().toString().trim();
-
-        DatabaseReference reference = FirebaseDatabase.getInstance("https://luminousbankdb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
-        //DatabaseReference databaseReference = FirebaseDatabase.getInstance("https://luminousbankdb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
-
-        Query checkUser = reference.orderByChild("phoneNumber").equalTo(userEnteredPhoneNum);
-        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                if(snapshot.exists()){
-                    phoneNumber.setError(null);
-                    phoneNumber.setErrorEnabled(false);
-                    String passwordFromDB = snapshot.child(userEnteredPhoneNum).child("password").getValue(String.class);
-
-                    if(passwordFromDB.equals(userEnteredPassword)){
-
-                        phoneNumber.setError(null);
-                        phoneNumber.setErrorEnabled(false);
-
-                        String firstnameFromDB = snapshot.child(userEnteredPhoneNum).child("password").getValue(String.class);
-                        String lastnameFromDB = snapshot.child(userEnteredPhoneNum).child("password").getValue(String.class);
-                        String emailFromDB = snapshot.child(userEnteredPhoneNum).child("password").getValue(String.class);
-                        String phoneNoFromDB = snapshot.child(userEnteredPhoneNum).child("password").getValue(String.class);
-
-                        Intent intent = new Intent(getApplicationContext(), UserProfile.class);
-
-                        intent.putExtra("firstname", firstnameFromDB);
-                        intent.putExtra("lastname", lastnameFromDB);
-                        intent.putExtra("email", emailFromDB);
-                        intent.putExtra("phoneNo", phoneNoFromDB);
-                        intent.putExtra("password", passwordFromDB);
-
-                        startActivity(intent);
-
-                    }
-                    else {
-                        password.setError("Wrong Password");
-                        password.requestFocus();
-                    }
-                }
-                else{
-                    phoneNumber.setError("No such User Exist");
-                    phoneNumber.requestFocus();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/
 
         final String userEnteredUsername = phoneNumber.getEditText().getText().toString().trim();
         final String userEnteredPassword = password.getEditText().getText().toString().trim();
