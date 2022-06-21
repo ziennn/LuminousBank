@@ -196,7 +196,7 @@ public class Register extends AppCompatActivity {
         intent.putExtra("phoneNo", phoneNo);*/
         //intent.putExtra("whatToDO", "createNewUser"); // This is to identify that which action should OTP perform after verification.
 
-        Pair[] pairs = new Pair[4];
+   /*     Pair[] pairs = new Pair[4];
         pairs[0] = new Pair<View,String>(backBtn,"transition_back_btn");
         pairs[1] = new Pair<View,String>(next,"transition_next_btn");
         pairs[2] = new Pair<View,String>(login,"transition_login_btn");
@@ -207,7 +207,7 @@ public class Register extends AppCompatActivity {
             startActivity(intent, options.toBundle());
         } else {
             startActivity(intent);
-        }
+        }*/
 
     }
 
