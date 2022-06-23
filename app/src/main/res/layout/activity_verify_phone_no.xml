@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:src="@drawable/ic_baseline_back"
-            android:transitionName="transition_back_btn"/>
+            android:transitionName="transition_back_btn"
+            android:onClick="SignUpBackButton"/>
 
 
         <TextView

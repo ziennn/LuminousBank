@@ -28,7 +28,6 @@ public class UserProfile extends AppCompatActivity {
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signOut();
                 signOutUser();
             }
         });
@@ -36,6 +35,7 @@ public class UserProfile extends AppCompatActivity {
     }
 
     private void signOutUser() {
+        mAuth.signOut();
         Intent mainAct = new Intent(com.example.luminousbank.UserProfile.this, Home.class);
         mainAct.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(mainAct);

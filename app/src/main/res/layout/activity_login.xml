@@ -125,6 +125,7 @@
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/poppins"
                     android:text="Forgot Password?"
+                    android:onClick="callForgotPassword"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
 

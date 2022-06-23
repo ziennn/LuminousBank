@@ -162,7 +162,7 @@ public class VerifyPhoneNo extends AppCompatActivity {
                             //} else if (whatToDO.equals("createNewUser")) {
                             //storeNewUsersData();
                             //}
-                            Intent intent = new Intent(getApplicationContext(), UserProfile.class);
+                            Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                             Toast.makeText(VerifyPhoneNo.this, "Verification Completed!", Toast.LENGTH_SHORT).show();
@@ -188,14 +188,19 @@ public class VerifyPhoneNo extends AppCompatActivity {
           startActivity(new Intent(getApplicationContext(), UserProfile.class));
           finish();
       }*/
-      public void callNextScreenFromOTP(View view) {
-          String code = pinFromUser.getText().toString();
-          if (!code.isEmpty()){
-              verifyCode(code);
-          }
+    public void callNextScreenFromOTP(View view) {
+        String code = pinFromUser.getText().toString();
+        if (!code.isEmpty()){
+            verifyCode(code);
+        }
 
-      }
+    }
     public void goToHomeFromOTP(View view){
+
+    }
+
+    public void SignUpBackButton(View view) {
+        startActivity(new Intent(VerifyPhoneNo.this, Register.class));
 
     }
 }

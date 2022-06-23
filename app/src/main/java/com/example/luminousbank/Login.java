@@ -161,7 +161,7 @@ public class Login extends AppCompatActivity {
                         String lastnameFromDB = snapshot.child(userEnteredUsername).child("lastname").getValue(String.class);
                         String emailFromDB = snapshot.child(userEnteredUsername).child("email").getValue(String.class);
                         String phoneNoFromDB = snapshot.child(userEnteredUsername).child("phoneNo").getValue(String.class);
-                        Intent intent = new Intent(getApplicationContext(), UserProfile.class);
+                        Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                         intent.putExtra("firstname", firstnameFromDB);
                         intent.putExtra("lastname", lastnameFromDB);
                         intent.putExtra("email", emailFromDB);
@@ -192,5 +192,9 @@ public class Login extends AppCompatActivity {
     public void callSignUpFromLogin(View view) {
         startActivity(new Intent(getApplicationContext(), Register.class));
         //finish();
+    }
+
+    public void callForgotPassword(View view) {
+        startActivity(new Intent(getApplicationContext(), ForgetPassword.class));
     }
 }

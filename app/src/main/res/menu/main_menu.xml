@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_search"
+            android:title="Search"/>
+        <item
+            android:id="@+id/nav_categories"
+            android:title="Categories"/>
+    </group>
+
+    <item android:title="Profile Menu">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/changePass"
+                    android:title="Change Password"/>
+                <item
+                    android:id="@+id/accRecovery"
+                    android:title="Account Recovery"/>
+                <item
+                    android:id="@+id/logout"
+                    android:title="Logout"/>
+            </group>
+        </menu>
+
+    </item>
+
+</menu>

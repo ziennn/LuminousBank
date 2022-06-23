@@ -59,8 +59,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="70dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="108dp"
                 android:fontFamily="@font/poppins"
                 android:foregroundGravity="center|fill_vertical"
                 android:gravity="center"
@@ -80,10 +80,11 @@
 
             <!--Amount Sent-->
             <TextView
+                android:id="@+id/confirm_amountTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
-                android:text="@string/sendMoneyAmount"
+                android:text="PHP 200.00"
                 android:layout_gravity="center"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -111,6 +112,7 @@
 
             <!--Message here-->
             <TextView
+                android:id="@+id/confirm_messageTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -142,10 +144,10 @@
             android:id="@+id/sendMoneyBtnConti"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="100dp"
             android:backgroundTint="@color/green"
             android:fontFamily="@font/poppins_medium"
-            android:onClick="callNextSendMoneyScreen"
+            android:onClick="callConfirmNextScreen"
             android:text="Send"
             android:textAllCaps="false"
             android:textColor="@color/white"
