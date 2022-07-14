@@ -33,7 +33,10 @@ Click the link to watch _______
 * Cion, Christine Mae
 * Navarro, Crizien Marnic
 
-### Adviser: 
+### Course: 
+* Bachelor of Science in Computer Science - 3A
+
+### Professor: 
 * Jefferson A. Costales
 
 ### School Name:
@@ -44,9 +47,6 @@ Nagtahan, Sampaloc, Manila, Philippines
 College of Arts and Sciences
 
 ITE Department
-
-### Course: 
-* Bachelor of Science in Computer Science
 
 ### Date: 
 * JULY 22, 2022
