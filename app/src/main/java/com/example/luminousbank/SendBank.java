@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-public class SendMoney extends AppCompatActivity {
+public class SendBank extends AppCompatActivity {
     ImageView sendmoneybackbtn;
     EditText sendaccnum, sendmoneyamount, sendmoneymessage;
 
@@ -17,7 +18,7 @@ public class SendMoney extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_send_money);
+        setContentView(R.layout.activity_send_bank);
 
         sendmoneybackbtn = findViewById(R.id.sendMoneyBackButton);
         sendaccnum = findViewById(R.id.sendMoney_accNo);
@@ -28,7 +29,7 @@ public class SendMoney extends AppCompatActivity {
         sendmoneybackbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SendMoney.this, MainActivity.class);
+                Intent intent = new Intent(SendBank.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -67,13 +68,15 @@ public class SendMoney extends AppCompatActivity {
         }
 
 
-
+        String sendacc = sendaccnum.getText().toString();
         String sendamount = sendmoneyamount.getText().toString();
         String sendmessage = sendmoneymessage.getText().toString();
 
-        Intent intent = new Intent(getApplicationContext(), SendMoneyConfirmation.class);
+        Intent intent = new Intent(getApplicationContext(), SendBankConfirmation.class);
+        intent.putExtra("keyaccnum",sendacc);
         intent.putExtra("keyamount",sendamount);
         intent.putExtra("keymessage",sendmessage);
+        Toast.makeText(SendBank.this, "Money Bank Transfer Successfully", Toast.LENGTH_SHORT).show();
         startActivity(intent);
 
 

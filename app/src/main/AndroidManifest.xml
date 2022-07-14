@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LuminousBank">
         <activity
+            android:name=".Withdraw"
+            android:exported="false" />
+        <activity
+            android:name=".Deposit"
+            android:exported="false" />
+        <activity
+            android:name=".Savings"
+            android:exported="false" />
+        <activity
+            android:name=".MoneySendConfirmation"
+            android:exported="false" />
+        <activity
+            android:name=".MoneySend"
+            android:exported="false" />
+        <activity
             android:name=".SelectedBankActivity"
             android:exported="false" />
         <activity
@@ -20,10 +35,10 @@
             android:name=".TermsAndAgreement"
             android:exported="false" />
         <activity
-            android:name=".SendMoneyConfirmation"
+            android:name=".SendBankConfirmation"
             android:exported="false" />
         <activity
-            android:name=".SendMoney"
+            android:name=".SendBank"
             android:exported="false" />
         <activity
             android:name=".UserProfile"
@@ -42,9 +57,6 @@
             android:exported="false" />
         <activity
             android:name=".ForgetPassword"
-            android:exported="false" />
-        <activity
-            android:name=".Register3"
             android:exported="false" />
         <activity
             android:name=".Login"

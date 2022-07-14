@@ -186,7 +186,7 @@
             android:id="@+id/reg_btn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="50dp"
             android:backgroundTint="@color/green"
             android:fontFamily="@font/poppins_medium"
             android:text="Continue"

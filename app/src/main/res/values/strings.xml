@@ -28,9 +28,11 @@
     <string name="google_play_services">Google Play Services</string>
     <string name="security">Security</string>
 
-    <!--Send Money Strings-->
+    <!--Send Money & Bank Transfer Strings-->
     <string name="sendMoney">Send Money</string>
+    <string name="bankTransfer">Bank Transfer</string>
     <string name="accNumber">Account Number</string>
+    <string name="phoneNumber">Phone Number (Recipient)</string>
     <string name="amount">Amount</string>
     <string name="message">Message (optional)</string>
 

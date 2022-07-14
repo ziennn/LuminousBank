@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,12 +31,12 @@ import com.hbb20.CountryCodePicker;
 
 public class ForgetPassword extends AppCompatActivity {
     //variables
-    private ImageView screenIcon;
-    private TextView title, description;
-    private TextInputLayout phoneNumber;
-    private CountryCodePicker countryCodePicker;
-    private Button fpnextBtn;
-    ProgressBar progressBar;
+     ImageView screenIcon;
+     TextView title, description;
+     TextInputLayout phoneNumberText;
+     CountryCodePicker countryCodePicker;
+     Button fpnextBtn;
+     ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,21 +48,24 @@ public class ForgetPassword extends AppCompatActivity {
         title = findViewById(R.id.forget_password_title);
         description = findViewById(R.id.forget_password_description);
         countryCodePicker = findViewById(R.id.country_code_picker);
-        phoneNumber = findViewById(R.id.forget_password_number);
+        phoneNumberText = findViewById(R.id.forget_password_number);
         progressBar = findViewById(R.id.progress_bar);
+
+        progressBar.setVisibility(View.GONE);
+
     }
     /*Call THE OTP Screen and
     pass phone Number
     for verification*/
     private boolean validatePhoneNumber() {
-        String val = phoneNumber.getEditText().getText().toString();
+        String val = phoneNumberText.getEditText().getText().toString();
 
         if (val.isEmpty()) {
-            phoneNumber.setError("Enter valid phone number");
+            phoneNumberText.setError("Enter valid phone number");
             return false;
         } else {
-            phoneNumber.setError(null);
-            phoneNumber.setErrorEnabled(false);
+            phoneNumberText.setError(null);
+            phoneNumberText.setErrorEnabled(false);
             return true;
         }
     }
@@ -71,7 +75,7 @@ public class ForgetPassword extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void verifyPhoneNumber(View view) {
+    public void forgetNextBtn(View view) {
         //Check the internet connection
         if (!isConnected(this)) {
             showCustomDialog();
@@ -82,39 +86,37 @@ public class ForgetPassword extends AppCompatActivity {
         }
         progressBar.setVisibility(View.VISIBLE);
         //Get complete phone number
-        String _getUserEnteredPhoneNumber = phoneNumber.getEditText().getText().toString().trim();
-        //Remove first zero if entered!
-        if (_getUserEnteredPhoneNumber.charAt(0) == '0') {
-            _getUserEnteredPhoneNumber = _getUserEnteredPhoneNumber.substring(1);
-        }
-        //Complete phone number
-        final String _phoneNo = "+" + countryCodePicker.getFullNumber() + _getUserEnteredPhoneNumber;
+        final String phoneNo = phoneNumberText.getEditText().getText().toString().trim();
+        //String code = countryCodePicker.getFullNumber();
 
-        Query checkUser = FirebaseDatabase.getInstance().getReference("Users").orderByChild("phoneNo").equalTo(_phoneNo);
+        Query checkUser = FirebaseDatabase.getInstance("https://luminousbankdb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users").orderByChild("phoneNo").equalTo(phoneNo);
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
-                    phoneNumber.setError(null);
-                    phoneNumber.setErrorEnabled(false);
+                    phoneNumberText.setError(null);
+                    phoneNumberText.setErrorEnabled(false);
 
-                    Intent intent = new Intent(getApplicationContext(), VerifyPhoneNo.class);
-                    intent.putExtra("phoneNo", _phoneNo);
+                    Intent intent = new Intent(getApplicationContext(), SetNewPassword.class);
+                    intent.putExtra("phoneNo", phoneNo);
+                    //intent.putExtra("code", code);
                     intent.putExtra("whatToDo","updateData");
                     startActivity(intent);
                     finish();
 
-                    progressBar.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.VISIBLE);
 
                 }else {
                     progressBar.setVisibility(View.GONE);
-                    phoneNumber.setError("No such user exist!");
-                    phoneNumber.requestFocus();
+                    phoneNumberText.setError("No such user exist!");
+                    phoneNumberText.requestFocus();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                progressBar.setVisibility(View.GONE);
+                Toast.makeText(ForgetPassword.this, error.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });

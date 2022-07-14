@@ -25,6 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity {
+    FirebaseAuth auth;
 
     ImageView backBtn;
     Button next, login, regBtn;
@@ -171,6 +172,7 @@ public class Register extends AppCompatActivity {
         }// Validation succeeded and now move to the next screen to verify phone number
 
         //Get all the the values in String
+        double balance = 1000;
         String firstname = regfirstname.getEditText().getText().toString();
         String lastname = reglastname.getEditText().getText().toString();
         String email = regemail.getEditText().getText().toString();
@@ -179,7 +181,12 @@ public class Register extends AppCompatActivity {
 
 
         Intent intent = new Intent(getApplicationContext(), VerifyPhoneNo.class);
+        intent.putExtra("firstname", firstname);
+        intent.putExtra("lastName", lastname);
+        intent.putExtra("email", email);
+        intent.putExtra("password", password);
         intent.putExtra("phoneNo", phoneNo);
+        intent.putExtra("whatToDo","createNewUser");
         startActivity(intent);
 
         UserHelperClass helperClass = new UserHelperClass(firstname, lastname, email, phoneNo, password);

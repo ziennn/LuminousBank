@@ -29,31 +29,42 @@
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.1" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/ic_baseline_search.xml" value="0.1" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/ic_deposit.xml" value="0.131" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/ic_game.xml" value="0.131" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/ic_launcher_background.xml" value="0.156" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/ic_sendmoney.xml" value="0.131" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/ic_wallet.xml" value="0.1775" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/drawable/phonever_background.xml" value="0.1" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/font/montserrat_semibold.xml" value="0.15477293790546803" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_agreement.xml" value="0.15433946130825138" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_bank_list.xml" value="0.14279606669516887" />
-        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_bank_transfer_list.xml" value="0.15433946130825138" />
-        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_dashboard.xml" value="0.18" />
-        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_forget_password.xml" value="0.22" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_bank_transfer_list.xml" value="0.18" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_deposit.xml" value="0.25" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_forget_password.xml" value="0.18" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_fp_make_selection.xml" value="0.2" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_fp_success_message.xml" value="0.25" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_login1.xml" value="0.25" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_main.xml" value="0.14492753623188406" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_money_send.xml" value="0.22" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_money_send_confirmation.xml" value="0.15433946130825138" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_register2.xml" value="0.22" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_register3.xml" value="0.25" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_savings.xml" value="0.23703217334208798" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_selected_bank.xml" value="0.15433946130825138" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_send_bank.xml" value="0.22" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_send_bank_confirmation.xml" value="0.15433946130825138" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_send_money.xml" value="0.18" />
-        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_send_money_confirmation.xml" value="0.14279606669516887" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_send_money_confirmation.xml" value="0.25" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_set_new_password.xml" value="0.25" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_splash.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_terms_and_agreement.xml" value="0.22" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_user_profile.xml" value="0.22" />
-        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_verify_phone_no.xml" value="0.18" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_verify_phone_no.xml" value="0.22" />
+        <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/activity_withdraw.xml" value="0.25" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/content_bank_transfer.xml" value="0.2" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/fragment_first.xml" value="0.15433946130825138" />
         <entry key="..\:/Users/Christine/Documents/3rd year (2nd Sem)/LuminousBank/app/src/main/res/layout/menu_header.xml" value="0.15433946130825138" />

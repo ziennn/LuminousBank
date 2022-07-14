@@ -54,7 +54,7 @@ public class BankTransferList extends AppCompatActivity implements BankAdapter.S
     @Override
     public void selectedBank(BankModel bankModel) {
 
-        startActivity(new Intent(BankTransferList.this, SendMoney.class).putExtra("data",bankModel));
+        startActivity(new Intent(BankTransferList.this, SendBank.class).putExtra("data",bankModel));
 
     }
     @Override

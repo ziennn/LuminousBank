@@ -20,18 +20,7 @@ public class Home extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
 
-/*        loginButton = findViewById(R.id.loginBtn);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                callLoginScreen();
-            }
-        });
 
-    }
-    public void callLoginScreen(){
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);*/
     }
 
     //Call Login Screen

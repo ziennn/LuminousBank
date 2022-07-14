@@ -44,7 +44,7 @@ public class VerifyPhoneNo extends AppCompatActivity {
     String codeBySystem;
     TextView otpDescriptionText;
 
-    String firstname, lastname, phoneNo, email, password;
+    String firstname, lastname, phoneNo, email, password, whatToDO;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -79,7 +79,7 @@ public class VerifyPhoneNo extends AppCompatActivity {
         email = getIntent().getStringExtra("email");
         password = getIntent().getStringExtra("password");
         phoneNo = getIntent().getStringExtra("phoneNo");
-        //whatToDO = getIntent().getStringExtra("whatToDO");
+        whatToDO = getIntent().getStringExtra("whatToDO");
 
         otpDescriptionText.setText("Enter One Time Password Sent On +63"+phoneNo);
 
@@ -146,7 +146,7 @@ public class VerifyPhoneNo extends AppCompatActivity {
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codeBySystem, codeByUser);
         signInTheUserByCredentials(credential);
     }
-    private void signInTheUserByCredentials (PhoneAuthCredential credential){
+    private void signInTheUserByCredentials (PhoneAuthCredential credential) {
 
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
@@ -157,11 +157,11 @@ public class VerifyPhoneNo extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             //Verification completed successfully here Either
                             // store the data or do whatever desire
-                            // if (whatToDO.equals("updateData")) {
-                            // updateOldUsersData();
-                            //} else if (whatToDO.equals("createNewUser")) {
-                            //storeNewUsersData();
-                            //}
+                           /* if (whatToDO.equals("updateData")) {
+                                updateOldUsersData();
+                            } else if (whatToDO.equals("createNewUser")) {
+                                storeNewUsersData();
+                            }*/
                             Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
@@ -173,21 +173,32 @@ public class VerifyPhoneNo extends AppCompatActivity {
                     }
                     //}
                 });
-
     }
-    /*  private void storeNewUsersData(){
-          FirebaseDatabase rootNode = FirebaseDatabase.getInstance("https://luminousbankdb-default-rtdb.asia-southeast1.firebasedatabase.app");
-          DatabaseReference reference = rootNode.getReference("Users");
 
-          //Create helperclass reference and store data using firebase
-          UserHelperClass addNewUser = new UserHelperClass(firstname, lastname, email, password, phoneNo);
-          reference.child(phoneNo).setValue(addNewUser);
 
-          //We will also create a Session here in next videos to keep the user logged In
+    private void updateOldUsersData() {
+        Intent intent = new Intent(getApplicationContext(), SetNewPassword.class);
+        intent.putExtra("phoneNo", phoneNo);
+        startActivity(intent);
+        finish();
+    }
 
-          startActivity(new Intent(getApplicationContext(), UserProfile.class));
-          finish();
-      }*/
+    private void storeNewUsersData(){
+        FirebaseDatabase rootNode = FirebaseDatabase.getInstance("https://luminousbankdb-default-rtdb.asia-southeast1.firebasedatabase.app");
+        DatabaseReference reference = rootNode.getReference("Users");
+
+        //Create helperclass reference and store data using firebase
+        UserHelperClass addNewUser = new UserHelperClass(firstname, lastname, email, password, phoneNo);
+        reference.child(phoneNo).setValue(addNewUser);
+
+        //We will also create a Session here in next videos to keep the user logged In
+
+          /*startActivity(new Intent(getApplicationContext(), Dashboard.class));
+          finish();*/
+        Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+        startActivity(intent);
+        finish();
+    }
     public void callNextScreenFromOTP(View view) {
         String code = pinFromUser.getText().toString();
         if (!code.isEmpty()){

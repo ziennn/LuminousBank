@@ -65,6 +65,20 @@
                         android:textColor="@color/green"
                         android:textSize="28sp" />
 
+                    <TextView
+                        android:id="@+id/available_balance_holder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="₱0.00"
+                        android:textColor="@color/green"
+                        android:textSize="40sp" />
+
+
+                </RelativeLayout>
+
                     <!--Search Bar-->
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -95,10 +109,30 @@
                             android:src="@drawable/ic_baseline_search" />
 
                     </RelativeLayout>
+   <!--                 <LinearLayout
+                        android:id="@+id/balanceContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:padding="8dp"
+                        android:background="#00796B"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/balanceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="₱ 0,000.00"
+                            android:textSize="40sp"
+                            android:textColor="#FFFFFF"/>
+                    </LinearLayout>
 
-                </RelativeLayout>
+                </RelativeLayout>-->
 
                 <!--Categories-->
+
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,6 +156,40 @@
                             android:elevation="8dp">
 
                             <ImageView
+                                android:id="@+id/savingsCard"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_wallet3" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Savings"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <!--Card 1-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/card"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:id="@+id/sendMoneyCard"
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
@@ -197,7 +265,7 @@
                             android:layout_height="50dp"
                             android:layout_gravity="center"
                             android:fontFamily="@font/poppins"
-                            android:text=" Currency\n Converter"
+                            android:text=" Currency\nConverter"
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -311,6 +379,20 @@
                         android:background="@color/white" />-->
 
                 </RelativeLayout>
+
+                <!--<Button
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="80dp"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="LOGOUT"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:cornerRadius="10dp"
+                    android:transitionName="transition_next_btn"/>-->
 
             </LinearLayout>
 

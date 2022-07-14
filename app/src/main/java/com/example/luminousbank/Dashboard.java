@@ -11,26 +11,37 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.example.luminousbank.Database.UserHelperClass;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Variables
     static final float END_SCALE = 0.7f;
+    //private FirebaseAuth mAuth;
 
+    DatabaseReference databaseReference;
 
     //RecyclerView featuredRecycler;
+    TextView availablebalanceholder;
 
     //Drawer Menu
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    ImageView menuIcon, banktransferCard;
+    ImageView menuIcon, banktransferCard, sendmoneyCard, savingsCard;
     LinearLayout contentView;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,16 +62,22 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         //Hooks
         menuIcon = findViewById(R.id.menu_icon);
         contentView = findViewById(R.id.content);
+        availablebalanceholder = findViewById(R.id.available_balance_holder);
+
 
         //Menu Hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
         banktransferCard = findViewById(R.id.bankTransferCard);
+        sendmoneyCard = findViewById(R.id.sendMoneyCard);
+        savingsCard = findViewById(R.id.savingsCard);
 
+        String DepositAmount = getIntent().getStringExtra("keydepositamount");
+
+        availablebalanceholder.setText("PHP "+DepositAmount+".00");
 
         //open and closes drawer
         navigationDrawer();
-
         banktransferCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +87,33 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             }
         });
 
+        sendmoneyCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MoneySend.class);
+                startActivity(intent);
+
+            }
+        });
+
+        savingsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Savings.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
+
+  /*  private void signOutUser() {
+        mAuth.signOut();
+        Intent mainAct = new Intent(Dashboard.this, Home.class);
+        mainAct.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(mainAct);
+        finish();
+    }*/
 
 
     //Navigation Drawer Functions

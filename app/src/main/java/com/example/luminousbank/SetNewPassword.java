@@ -40,7 +40,7 @@ public class SetNewPassword extends AppCompatActivity {
         }
         if (newPassword.getEditText().getText().toString().equals(confirmPassword.getEditText().getText().toString())) {
 
-            Toast.makeText(getApplicationContext(), "Password match!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Password reset!", Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(getApplicationContext(), "Password does not match!", Toast.LENGTH_LONG).show();
@@ -117,7 +117,7 @@ public class SetNewPassword extends AppCompatActivity {
             newPassword.setError("Field can not be empty");
             return false;
         } else if (!val.matches(checkPassword)) {
-            newPassword.setError("Password should contain 8 characters!");
+            newPassword.setError("Password should contain 8 characters, 1 digit, and 1 upper case letter");
             return false;
         } else {
             newPassword.setError(null);
@@ -142,7 +142,7 @@ public class SetNewPassword extends AppCompatActivity {
             newPassword.setError("Field can not be empty");
             return false;
         } else if (!val.matches(checkPassword)) {
-            newPassword.setError("Password should contain 8 characters!");
+            newPassword.setError("Password should contain 8 characters, 1 digit, and 1 upper case letter");
             return false;
         } else {
             newPassword.setError(null);
@@ -151,4 +151,7 @@ public class SetNewPassword extends AppCompatActivity {
         }
     }
 
+    public void goToHomeFromSetNewPassword(View view) {
+        startActivity(new Intent(SetNewPassword.this, ForgetPassword.class));
+    }
 }
