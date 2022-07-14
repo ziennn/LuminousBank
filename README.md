@@ -20,7 +20,7 @@ Luminous Bank is an Android app that uses Firebase Realtime Database to send and
 <!--![Face Recognition](https://user-images.githubusercontent.com/106217907/171542988-329de313-97e3-480f-be11-cfbd336bca92.jpg)-->
 #### 5. Currency Converter
 <!--![Face Analyzer](https://user-images.githubusercontent.com/106217907/171543450-73faa700-73f4-4db9-9ef5-ca4cc47a1f47.jpg)-->
-#### 6. Word Game
+#### 6. Quiz Game
 <!--![GPS tracker](https://user-images.githubusercontent.com/106217907/171542995-2953cc09-0a24-454b-a146-49e44c1c27d0.jpg)-->
 
 ### Demo Video
