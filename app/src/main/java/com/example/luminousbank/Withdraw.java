@@ -6,17 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Withdraw extends AppCompatActivity {
 
-    EditText withdrawamount;
+    EditText withdraw_amount, deposit_amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_withdraw);
 
-        withdrawamount = findViewById(R.id.withdraw_amount);
+        withdraw_amount = findViewById(R.id.withdraw_amount);
+        deposit_amount = findViewById(R.id.deposit_amount);
 
     }
 
@@ -27,12 +29,12 @@ public class Withdraw extends AppCompatActivity {
 
     //VALIDATE AMOUNT
     private Boolean validateAmount() {
-        String val = withdrawamount.getText().toString();
+        String val = withdraw_amount.getText().toString();
         if (val.isEmpty()) {
-            withdrawamount.setError("Field cannot be empty");
+            withdraw_amount.setError("Field cannot be empty");
             return false;
         } else {
-            withdrawamount.setError(null);
+            withdraw_amount.setError(null);
             return true;
         }
     }
@@ -45,5 +47,7 @@ public class Withdraw extends AppCompatActivity {
 
         Intent intent = new Intent(getApplicationContext(), Dashboard.class);
         startActivity(intent);
+        Toast.makeText(Withdraw.this, "Withdraw Successfully Processed", Toast.LENGTH_SHORT).show();
+
     }
 }
