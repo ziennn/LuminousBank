@@ -72,7 +72,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="50dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="₱0.00"
+                        android:text=""
                         android:textColor="@color/green"
                         android:textSize="40sp" />
 

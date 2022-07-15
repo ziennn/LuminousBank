@@ -62,7 +62,7 @@
 
                 <!--AMOUNT-->
                 <EditText
-                    android:id="@+id/deposit_amount"
+                    android:id="@+id/withdraw_amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="30dp"
@@ -95,7 +95,8 @@
                     android:text="Withdraw"
                     android:textColor="@color/white"
                     android:textSize="18sp"
-                    app:cornerRadius="10dp">
+                    app:cornerRadius="10dp"
+                    android:onClick="callWithdrawDashboard">
 
                 </Button>
                 <!--android:id="@+id/btnAccept"-->
