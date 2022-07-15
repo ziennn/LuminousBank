@@ -29,4 +29,9 @@
     <color name="endColor">#489855</color>
     <color name="centerColor">#006797</color>
     <color name="userRow">#403fc68b</color>
+
+
+    <color name="Blue">#2070FC</color>
+    <color name="lightGrey">#E8EBEC</color>
+    <color name="anotherGrey">#607D8B</color>
 </resources>

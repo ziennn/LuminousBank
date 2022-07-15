@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LuminousBank">
         <activity
+            android:name=".CurrencyConvert"
+            android:exported="false" />
+        <activity
             android:name=".Withdraw"
             android:exported="false" />
         <activity
@@ -30,7 +33,7 @@
         <activity
             android:name=".BankTransferList"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".TermsAndAgreement"
             android:exported="false" />
@@ -63,14 +66,11 @@
             android:exported="true" />
         <activity
             android:name=".Dashboard"
-            android:exported="true" >
-
-        </activity>
-        <!-- Splash -->
+            android:exported="true" /> <!-- Splash -->
         <activity
             android:name=".Splash"
             android:exported="true">
-           <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -86,7 +86,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan"/> <!-- Used Font -->
+            android:windowSoftInputMode="adjustPan" /> <!-- Used Font -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -140,7 +140,7 @@
                     android:orientation="horizontal"
                     android:padding="20dp">
 
-                    <!--Card 1-->
+                    <!--Card 1 Savings-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -173,7 +173,7 @@
 
                     </LinearLayout>
 
-                    <!--Card 1-->
+                    <!--Card 2 Send Money-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -206,7 +206,7 @@
 
                     </LinearLayout>
 
-                    <!--Card 2-->
+                    <!--Card 3 Bank Transfer-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -238,7 +238,7 @@
 
                     </LinearLayout>
 
-                    <!--Card 3-->
+                    <!--Card 4 Currency Converter-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -253,6 +253,7 @@
                             android:elevation="8dp">
 
                             <ImageView
+                                android:id="@+id/currencyConverterCard"
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
@@ -271,7 +272,7 @@
                     </LinearLayout>
 
                     <!--Card 4-->
-                    <LinearLayout
+                  <!--  <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
@@ -300,7 +301,7 @@
                             android:text="See\nMore"
                             android:textAlignment="center" />
 
-                    </LinearLayout>
+                    </LinearLayout>-->
 
 
                 </LinearLayout>

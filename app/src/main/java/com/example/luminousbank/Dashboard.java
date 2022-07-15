@@ -4,27 +4,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.luminousbank.Database.UserHelperClass;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -40,7 +30,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     //Drawer Menu
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    ImageView menuIcon, banktransferCard, sendmoneyCard, savingsCard;
+    ImageView menuIcon, banktransferCard, sendmoneyCard, savingsCard, currencyConCard;
     LinearLayout contentView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +61,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         banktransferCard = findViewById(R.id.bankTransferCard);
         sendmoneyCard = findViewById(R.id.sendMoneyCard);
         savingsCard = findViewById(R.id.savingsCard);
+        currencyConCard = findViewById(R.id.currencyConverterCard);
 
         String DepositAmount = getIntent().getStringExtra("keydepositamount");
 
@@ -78,6 +69,16 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         //open and closes drawer
         navigationDrawer();
+
+        currencyConCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CurrencyConvert.class);
+                startActivity(intent);
+
+            }
+        });
+
         banktransferCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
