@@ -30,7 +30,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     //Drawer Menu
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    ImageView menuIcon, banktransferCard, sendmoneyCard, savingsCard, currencyConCard;
+    ImageView menuIcon, banktransferCard, sendmoneyCard, savingsCard, currencyConCard, quizGameCard;
     LinearLayout contentView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +62,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         sendmoneyCard = findViewById(R.id.sendMoneyCard);
         savingsCard = findViewById(R.id.savingsCard);
         currencyConCard = findViewById(R.id.currencyConverterCard);
+        quizGameCard = findViewById(R.id.quizGameCard);
 
         String DepositAmount = getIntent().getStringExtra("keydepositamount");
 
@@ -69,6 +70,15 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         //open and closes drawer
         navigationDrawer();
+
+        quizGameCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CurrencyConvert.class);
+                startActivity(intent);
+
+            }
+        });
 
         currencyConCard.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -79,55 +79,55 @@
 
                 </RelativeLayout>
 
-                    <!--Search Bar-->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_below="@id/app_name"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="40dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@color/white"
-                        android:elevation="8dp">
+                <!--Search Bar-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/app_name"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white"
+                    android:elevation="8dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="15dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="Search" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Search" />
 
 
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="15dp"
-                            android:src="@drawable/ic_baseline_search" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_baseline_search" />
 
-                    </RelativeLayout>
-   <!--                 <LinearLayout
-                        android:id="@+id/balanceContainer"
-                        android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:padding="8dp"
-                        android:background="#00796B"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/balanceText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:text="₱ 0,000.00"
-                            android:textSize="40sp"
-                            android:textColor="#FFFFFF"/>
-                    </LinearLayout>
+                </RelativeLayout>
+                <!--                 <LinearLayout
+                                     android:id="@+id/balanceContainer"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="130dp"
+                                     android:padding="8dp"
+                                     android:background="#00796B"
+                                     android:gravity="center_horizontal|center_vertical"
+                                     android:orientation="vertical">
+                                     <TextView
+                                         android:id="@+id/balanceText"
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:layout_marginBottom="5dp"
+                                         android:text="₱ 0,000.00"
+                                         android:textSize="40sp"
+                                         android:textColor="#FFFFFF"/>
+                                 </LinearLayout>
 
-                </RelativeLayout>-->
+                             </RelativeLayout>-->
 
                 <!--Categories-->
 
@@ -271,39 +271,6 @@
 
                     </LinearLayout>
 
-                    <!--Card 4-->
-                  <!--  <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:orientation="vertical">
-
-                        <RelativeLayout
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/card"
-                            android:elevation="8dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/ic_baseline_more" />
-
-                        </RelativeLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/poppins"
-                            android:text="See\nMore"
-                            android:textAlignment="center" />
-
-                    </LinearLayout>-->
-
-
                 </LinearLayout>
 
                 <!--Earn Extra Points Text-->
@@ -343,6 +310,7 @@
                         android:orientation="vertical">
 
                         <ImageView
+                            android:id="@+id/quizGameCard"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:layout_centerInParent="true"
