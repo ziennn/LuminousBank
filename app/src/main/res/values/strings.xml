@@ -73,4 +73,12 @@
         <item>NPR - Nepalese Rupee</item>
     </string-array>
 
+    <!--Quiz Game-->
+    <string-array name="quiz_category">
+        <item>All</item>
+        <item>Asia</item>
+        <item>America</item>
+        <item>Europe</item>
+    </string-array>
+
 </resources>

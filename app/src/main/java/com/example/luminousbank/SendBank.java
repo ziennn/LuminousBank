@@ -29,7 +29,7 @@ public class SendBank extends AppCompatActivity {
         sendmoneybackbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SendBank.this, MainActivity.class);
+                Intent intent = new Intent(SendBank.this, BankTransferList.class);
                 startActivity(intent);
             }
         });
@@ -76,7 +76,6 @@ public class SendBank extends AppCompatActivity {
         intent.putExtra("keyaccnum",sendacc);
         intent.putExtra("keyamount",sendamount);
         intent.putExtra("keymessage",sendmessage);
-        Toast.makeText(SendBank.this, "Money Bank Transfer Successfully", Toast.LENGTH_SHORT).show();
         startActivity(intent);
 
 

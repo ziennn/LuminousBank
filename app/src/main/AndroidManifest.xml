@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LuminousBank">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizGame"
+            android:exported="false" />
+        <activity
+            android:name=".StartQuiz"
+            android:exported="false" />
+        <activity
             android:name=".CurrencyConvert"
             android:exported="false" />
         <activity
