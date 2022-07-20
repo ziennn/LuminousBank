@@ -24,7 +24,7 @@ Luminous Bank is an Android app that uses Firebase Realtime Database to send and
 <!--![GPS tracker](https://user-images.githubusercontent.com/106217907/171542995-2953cc09-0a24-454b-a146-49e44c1c27d0.jpg)-->
 
 ### Demo Video
-Click the link to watch _______
+Click the link to watch https://youtu.be/3aWlD6u8xRg
 
 ### Researcher/Developer:
 
