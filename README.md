@@ -2,6 +2,13 @@
 
 <!--![Graphical feature](https://github.com/ziennn/LuminousBank/blob/main/Screenshots/Template.png)-->
 
+### Demo Video
+<!--Click the link to watch https://youtu.be/3aWlD6u8xRg-->
+
+<div >
+  <a href="https://youtu.be/3aWlD6u8xRg"><img src="https://github.com/ziennn/LuminousBank/blob/main/Screenshots/Thumbnail.png" alt="Youtube Tutorial" width = "1000px" height = "500px"></a>
+</div>
+
 Luminous Bank is an Android app that uses Firebase Realtime Database to send and receive money. 
 
 This app also has a game that converts score into points.
@@ -73,10 +80,10 @@ ITE Department
 ### Date: 
 * JULY 22, 2022
 
-### Demo Video
+<!-- ### Demo Video
 <!--Click the link to watch https://youtu.be/3aWlD6u8xRg-->
 
 <div >
   <a href="https://youtu.be/3aWlD6u8xRg"><img src="https://github.com/ziennn/LuminousBank/blob/main/Screenshots/Thumbnail.png" alt="Youtube Tutorial"></a>
-</div>
+</div> -->
 
