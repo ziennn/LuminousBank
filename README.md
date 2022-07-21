@@ -83,7 +83,7 @@ ITE Department
 <!-- ### Demo Video
 <!--Click the link to watch https://youtu.be/3aWlD6u8xRg-->
 
-<div >
+<!-- <div >
   <a href="https://youtu.be/3aWlD6u8xRg"><img src="https://github.com/ziennn/LuminousBank/blob/main/Screenshots/Thumbnail.png" alt="Youtube Tutorial"></a>
 </div> -->
 
