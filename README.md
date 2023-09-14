@@ -11,7 +11,7 @@
 
 Luminous Bank is an Android app that uses Firebase Realtime Database to send and receive money. 
 
-<!-- This app also has a game that converts score into points. -->
+This app also has a game that converts score into points.
 
 ### Requirements
 *   Android Studio (installed on a Mac, Linux, or Windows machine)
